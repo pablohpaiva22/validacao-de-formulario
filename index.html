@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form validation</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+
+    <body>
+        <main class="container">
+            <div class="information">
+                <div class="information-box">
+                    <img src="./img/icons8-check-64.png" alt="">
+                    <h3>Quick and free sign-up</h3>
+                    <p>Enter your e-mail adress to create an account</p>
+                </div>
+                <div class="information-box">
+                    <img src="./img/icons8-check-64.png" alt="">
+                    <h3>Crass-platform solution</h3>
+                    <p>Preview your newsletters on any device befor sending them out.</p>
+                </div>
+                <div class="information-box">
+                    <img src="./img/icons8-check-64.png" alt="">
+                    <h3>Start sendindg emails</h3>
+                    <p>Yse our API or pick our pre-built templates</p>
+                </div>
+           </div>
+    
+           <form class="form" action="./" novalidate>
+               <h1>Create your account</h1>
+    
+               <label for="email">E-mail</label>
+               <input type="email" id="email" name="email" placeholder="Enter your e-mail adress">
+               <div class="emailValidation">Preencha este campo</div>
+    
+               <label for="name">Full name</label>
+               <input type="text" id="name" name="name" placeholder="Enter your full name">
+               <div class="nameValidation">Preencha este campo</div>
+    
+               <label for="password">Password</label>
+               <input type="password" id="password" name="password" placeholder="Type to create a password">
+               <div class="passValidation">Preencha este campo</div>
+
+               <div class="checkbox-box">
+                    <input type="checkbox" id="checkbox" name="checkbox">
+                    <label for="checkbox" id="checkbox-label">Get updates and notifications about our product</label>
+                </div>
+                <div class="checkboxValidation">Preencha este campo</div>
+
+               <button>CREATE</button>
+           </form>
+        </main>
+    </body>
+    <script src="./script.js"></script>
+</html>

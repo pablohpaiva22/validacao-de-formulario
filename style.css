@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    background: #F4F3FB;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0 20px;
+}
+
+.container {
+    max-width: 900px;
+    background: #fff;
+    margin: 100px auto;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 6px;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.information {
+    background: linear-gradient(to top, #735FCD, #BFA1EA);
+    padding: 60px;
+    flex: 1.3;
+    border-radius: 4px;
+}
+
+.information-box {
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.information-box img {
+    width: 24px;
+}
+
+.information-box h3 {
+    margin-bottom: 8px;
+    font-weight: normal;
+}
+
+.information-box p {
+    max-width: 180px;
+    min-width: 180px;
+    font-size: 0.8rem;
+}
+
+.form {
+    background: #fff;
+    padding: 60px;
+    flex: 2;
+}
+
+.form h1 {
+    margin-bottom: 30px;
+    min-width: 200px;
+}
+
+.form label {
+    margin-bottom: 8px;
+    margin-top: 16px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="password"] {
+    width: 100%;
+    margin-bottom: 8px;
+    padding: 12px;
+    display: block;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form input[type="checkbox"] {
+    display: inline-block;
+}
+
+.form .emailValidation,
+.form .nameValidation,
+.form .passValidation,
+.form .checkboxValidation {
+    display: none;
+    color: red;
+    font-size: .85rem;
+}
+
+.form .emailValidation.ativo {
+    display: block;
+}
+
+.form .nameValidation.ativo {
+    display: block;
+}
+
+.form .passValidation.ativo {
+    display: block;
+}
+
+.form .checkboxValidation.ativo {
+    display: block;
+}
+
+.checkbox-box {
+    margin-bottom: 8px;
+    margin-top: 22px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.form #checkbox-label {
+    color: #999;
+    margin: 0;
+    font-weight: normal;
+    font-size: 0.9rem;
+}
+
+button {
+    width: 100%;
+    margin-top: 22px;
+    background: #735FCD;
+    color: #fff;
+    padding: 16px;
+    display: block;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+}
+
+button:hover {
+    background: #624ebb;
+}
+
+@media(max-width: 800px) {
+    .information {
+        padding: 20px;
+    }
+    .form {
+        padding: 20px;
+    }
+    .form h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media(max-width: 450px) {
+    .container {
+        padding: 0;
+    }
+}
