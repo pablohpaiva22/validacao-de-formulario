@@ -71,9 +71,9 @@ body {
     font-weight: bold;
 }
 
-.form input[type="text"],
-.form input[type="email"],
-.form input[type="password"] {
+input[type="text"],
+input[type="email"],
+input[type="password"] {
     width: 100%;
     margin-bottom: 8px;
     padding: 12px;
@@ -83,33 +83,44 @@ body {
     box-sizing: border-box;
 }
 
-.form input[type="checkbox"] {
+input[type="email"]:focus.ativo {
+    outline-color: red;
+} 
+
+input[type="checkbox"] {
     display: inline-block;
 }
 
-.form .emailValidation,
-.form .nameValidation,
-.form .passValidation,
-.form .checkboxValidation {
+.emailValidation,
+.nameValidation,
+.passValidation,
+.checkboxValidation,
+.emailValidation2 {
     display: none;
     color: red;
     font-size: .85rem;
 }
 
-.form .emailValidation.ativo {
+.emailValidation.ativo {
     display: block;
 }
 
-.form .nameValidation.ativo {
+.nameValidation.ativo {
     display: block;
 }
 
-.form .passValidation.ativo {
+.passValidation.ativo {
     display: block;
 }
 
-.form .checkboxValidation.ativo {
+.checkboxValidation.ativo {
     display: block;
+}
+
+.emailValidation2.ativo {
+    display: block;
+    color: red;
+    font-size: .85rem;
 }
 
 .checkbox-box {
@@ -120,7 +131,7 @@ body {
     align-items: center;
 }
 
-.form #checkbox-label {
+#checkbox-label {
     color: #999;
     margin: 0;
     font-weight: normal;
