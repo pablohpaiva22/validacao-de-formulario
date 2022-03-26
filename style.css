@@ -95,6 +95,7 @@ input[type="checkbox"] {
 .nameValidation,
 .passValidation,
 .checkboxValidation,
+.emailValidation1,
 .emailValidation2,
 .emailValidation3,
 .emailValidation4 {
@@ -117,6 +118,12 @@ input[type="checkbox"] {
 
 .checkboxValidation.ativo {
     display: block;
+}
+
+.emailValidation1.ativo {
+    display: block;
+    color: red;
+    font-size: .85rem;
 }
 
 .emailValidation2.ativo {
