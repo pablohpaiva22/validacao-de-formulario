@@ -59,6 +59,20 @@ body {
     flex: 2;
 }
 
+.enviado {
+   display: none;
+   background: green;
+   color: #fff;
+   margin-top: 24px;
+   padding: 6px;
+   font-size: .85rem;
+   text-align: center;
+}
+
+.form p.ativo {
+    display: block;
+ }
+
 .form h1 {
     margin-bottom: 30px;
     min-width: 200px;
@@ -92,13 +106,15 @@ input[type="checkbox"] {
 }
 
 .emailValidation,
-.nameValidation,
-.passValidation,
-.checkboxValidation,
 .emailValidation1,
 .emailValidation2,
 .emailValidation3,
-.emailValidation4 {
+.emailValidation4,
+.nameValidation,
+.nameValidation1,
+.passValidation,
+.passValidation1,
+.checkboxValidation {
     display: none;
     color: red;
     font-size: .85rem;
@@ -139,6 +155,30 @@ input[type="checkbox"] {
 }
 
 .emailValidation4.ativo {
+    display: block;
+    color: red;
+    font-size: .85rem;
+}
+
+.nameValidation.ativo {
+    display: block;
+    color: red;
+    font-size: .85rem;
+}
+
+.nameValidation1.ativo {
+    display: block;
+    color: red;
+    font-size: .85rem;
+}
+
+.passValidation.ativo {
+    display: block;
+    color: red;
+    font-size: .85rem;
+}
+
+.passValidation1.ativo {
     display: block;
     color: red;
     font-size: .85rem;
