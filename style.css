@@ -101,34 +101,45 @@ input[type="email"]:focus.ativo {
     outline-color: red;
 } 
 
+input[type="text"]:focus.ativo {
+    outline-color: red;
+} 
+
+input[type="password"]:focus.ativo {
+    outline-color: red;
+} 
+
+input[type="text"]:focus.ativo {
+    outline-color: red;
+} 
+
 input[type="checkbox"] {
     display: inline-block;
 }
 
-.emailValidation,
-.emailValidation1,
-.emailValidation2,
-.emailValidation3,
-.emailValidation4,
-.nameValidation,
-.nameValidation1,
-.passValidation,
-.passValidation1,
+.campoEmail,
+.pontoArrobaEmail,
+.arrobaEmail,
+.espacoEmail,
+.invalidoEmail,
+.campoNome,
+.campoSenha,
+.digitosSenha,
 .checkboxValidation {
     display: none;
     color: red;
     font-size: .85rem;
 }
 
-.emailValidation.ativo {
+.campoEmail.ativo {
     display: block;
 }
 
-.nameValidation.ativo {
+.campoNome.ativo {
     display: block;
 }
 
-.passValidation.ativo {
+.campoSenha.ativo {
     display: block;
 }
 
@@ -136,49 +147,43 @@ input[type="checkbox"] {
     display: block;
 }
 
-.emailValidation1.ativo {
+.pontoArrobaEmail.ativo {
     display: block;
     color: red;
     font-size: .85rem;
 }
 
-.emailValidation2.ativo {
+.arrobaEmail.ativo {
     display: block;
     color: red;
     font-size: .85rem;
 }
 
-.emailValidation3.ativo {
+.espacoEmail.ativo {
     display: block;
     color: red;
     font-size: .85rem;
 }
 
-.emailValidation4.ativo {
+.invalidoEmail.ativo {
     display: block;
     color: red;
     font-size: .85rem;
 }
 
-.nameValidation.ativo {
+.campoNome.ativo {
     display: block;
     color: red;
     font-size: .85rem;
 }
 
-.nameValidation1.ativo {
+.campoSenha.ativo {
     display: block;
     color: red;
     font-size: .85rem;
 }
 
-.passValidation.ativo {
-    display: block;
-    color: red;
-    font-size: .85rem;
-}
-
-.passValidation1.ativo {
+.digitosSenha.ativo {
     display: block;
     color: red;
     font-size: .85rem;

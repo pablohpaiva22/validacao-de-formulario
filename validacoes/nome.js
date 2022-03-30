@@ -1,24 +1,27 @@
 export default function nome() {
-    const $name = document.querySelector('input[type="text"]')
-    const $nameValidation1 = document.querySelector('.nameValidation1')
+    const $nome = document.querySelector('input[type="text"]')
+    const $campoNome = document.querySelector('.campoNome')
 
-    $name.addEventListener('blur', handleBlur)
+    $nome.addEventListener('blur', handleBlur)
 
     function handleBlur() {
-        if($name.value == '') {
-            $nameValidation1.classList.add('ativo')
-            $name.style.borderColor = 'red'
+        if($nome.value == '') {
+            $campoNome.classList.add('ativo')
+            $nome.style.borderColor = 'red'
+            $nome.classList.add('ativo')
         } else {
-            $nameValidation1.classList.remove('ativo')
-            $name.style.borderColor = 'rgba(0, 0, 0, 0.1)'
+            $campoNome.classList.remove('ativo')
+            $nome.style.borderColor = 'rgba(0, 0, 0, 0.1)'
         }
     }
     
-    $name.addEventListener('keyup', handleKeyUp)
+    $nome.addEventListener('keyup', handleKeyUp)
     
     function handleKeyUp() {
-        if($name.value !== '')
-        $nameValidation1.classList.remove('ativo')
-        $name.style.borderColor = 'rgba(0, 0, 0, 0.1)'
+        if($nome.value.length > 0) {
+            $campoNome.classList.remove('ativo')
+            $nome.classList.remove('ativo')
+            $nome.style.borderColor = 'rgba(0, 0, 0, 0.1)'
+        }
     }
 }

@@ -1,51 +1,53 @@
  export default function email() {
     const $email = document.querySelector('input[type="email"]')
 
-    const $emailValidation = document.querySelector('.emailValidation')
-    const $emailValidation1 = document.querySelector('.emailValidation1')
-    const $emailValidation2 = document.querySelector('.emailValidation2')
-    const $emailValidation3 = document.querySelector('.emailValidation3')
-    const $emailValidation4 = document.querySelector('.emailValidation4')
+    const $campoEmail = document.querySelector('.campoEmail')
+    const $pontoArrobaEmail = document.querySelector('.pontoArrobaEmail')
+    const $arrobaEmail = document.querySelector('.arrobaEmail')
+    const $espacoEmail = document.querySelector('.espacoEmail')
+    const $invalidoEmail = document.querySelector('.invalidoEmail')
 
     const regexp2 = /@\w+\./g
-
 
     $email.addEventListener('blur', handleBlur)
 
     function handleBlur() {
         if($email.value == '') {
-            $emailValidation.classList.add('ativo')
+            $campoEmail.classList.add('ativo')
+            $email.style.borderColor = 'red'
+            $email.classList.add('ativo')
+            $email.addEventListener('keyup', handleKeyUp)
         } else {
-            $emailValidation.classList.remove('ativo')
+            $campoEmail.classList.remove('ativo')
             handleKeyUp()
             $email.addEventListener('keyup', handleKeyUp)
         }
     }
 
     function handleKeyUp() {
-        if($email.value !== '') {
+        if($email.value.length !== 0) {
             if($email.value.match(regexp2) == null) {
-                $emailValidation1.classList.add('ativo')
+                $pontoArrobaEmail.classList.add('ativo')
             } else {
-                $emailValidation1.classList.remove('ativo')
+                $pontoArrobaEmail.classList.remove('ativo')
             }
 
             if(!$email.value.includes('@')) {
-                $emailValidation2.classList.add('ativo')
+                $arrobaEmail.classList.add('ativo')
             } else {
-                $emailValidation2.classList.remove('ativo')
+                $arrobaEmail.classList.remove('ativo')
             }
             
             if($email.value.includes(' ')) {
-                $emailValidation3.classList.add('ativo')
+                $espacoEmail.classList.add('ativo')
             } else {
-                $emailValidation3.classList.remove('ativo')
+                $espacoEmail.classList.remove('ativo')
             }
             
             if($email.value.substr(-1) == '@' || $email.value.substr(0, 1) == '@' || $email.value.substr(-1) == '.' || $email.value.substr(0, 1) == '.' || $email.value.includes('@.')) {
-                $emailValidation4.classList.add('ativo')
+                $invalidoEmail.classList.add('ativo')
             } else {
-                $emailValidation4.classList.remove('ativo')
+                $invalidoEmail.classList.remove('ativo')
             }
             
             if($email.value.match(regexp2) == null || !$email.value.includes('@') || $email.value.includes(' ') || $email.value.substr(0, 1) == '@' || $email.value.substr(0, 1) == '.' || $email.value.substr(-1) == '.' || $email.value.substr(-1) == '@' || $email.value.includes('@.')) {
@@ -56,11 +58,11 @@
                 $email.classList.remove('ativo')
             }
         } else {
-            $emailValidation.classList.remove('ativo')
-            $emailValidation1.classList.remove('ativo')
-            $emailValidation2.classList.remove('ativo')
-            $emailValidation3.classList.remove('ativo')
-            $emailValidation4.classList.remove('ativo')
+            $campoEmail.classList.remove('ativo')
+            $pontoArrobaEmail.classList.remove('ativo')
+            $arrobaEmail.classList.remove('ativo')
+            $espacoEmail.classList.remove('ativo')
+            $invalidoEmail.classList.remove('ativo')
             $email.style.borderColor = 'rgba(0, 0, 0, 0.1)'
             $email.classList.remove('ativo')
         }
